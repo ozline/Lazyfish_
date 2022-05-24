@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		262B3E08283D278200D788DA /* lazyfishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E07283D278200D788DA /* lazyfishApp.swift */; };
+		262B3E0A283D278200D788DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E09283D278200D788DA /* ContentView.swift */; };
+		262B3E0C283D278200D788DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262B3E0B283D278200D788DA /* Assets.xcassets */; };
+		262B3E0F283D278200D788DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262B3E0E283D278200D788DA /* Preview Assets.xcassets */; };
+		262B3E11283D278200D788DA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E10283D278200D788DA /* Persistence.swift */; };
+		262B3E14283D278200D788DA /* lazyfish.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E12283D278200D788DA /* lazyfish.xcdatamodeld */; };
+		262B3E1E283D278200D788DA /* lazyfishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E1D283D278200D788DA /* lazyfishTests.swift */; };
+		262B3E28283D278200D788DA /* lazyfishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E27283D278200D788DA /* lazyfishUITests.swift */; };
+		262B3E2A283D278200D788DA /* lazyfishUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E29283D278200D788DA /* lazyfishUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		262B3E1A283D278200D788DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 262B3DFC283D278200D788DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 262B3E03283D278200D788DA;
+			remoteInfo = lazyfish;
+		};
+		262B3E24283D278200D788DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 262B3DFC283D278200D788DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 262B3E03283D278200D788DA;
+			remoteInfo = lazyfish;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		262B3E04283D278200D788DA /* lazyfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lazyfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		262B3E07283D278200D788DA /* lazyfishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazyfishApp.swift; sourceTree = "<group>"; };
+		262B3E09283D278200D788DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		262B3E0B283D278200D788DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		262B3E0E283D278200D788DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		262B3E10283D278200D788DA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		262B3E13283D278200D788DA /* lazyfish.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = lazyfish.xcdatamodel; sourceTree = "<group>"; };
+		262B3E19283D278200D788DA /* lazyfishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lazyfishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		262B3E1D283D278200D788DA /* lazyfishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazyfishTests.swift; sourceTree = "<group>"; };
+		262B3E23283D278200D788DA /* lazyfishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lazyfishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		262B3E27283D278200D788DA /* lazyfishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazyfishUITests.swift; sourceTree = "<group>"; };
+		262B3E29283D278200D788DA /* lazyfishUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazyfishUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		262B3E01283D278200D788DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262B3E16283D278200D788DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262B3E20283D278200D788DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		262B3DFB283D278200D788DA = {
+			isa = PBXGroup;
+			children = (
+				262B3E06283D278200D788DA /* lazyfish */,
+				262B3E1C283D278200D788DA /* lazyfishTests */,
+				262B3E26283D278200D788DA /* lazyfishUITests */,
+				262B3E05283D278200D788DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		262B3E05283D278200D788DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				262B3E04283D278200D788DA /* lazyfish.app */,
+				262B3E19283D278200D788DA /* lazyfishTests.xctest */,
+				262B3E23283D278200D788DA /* lazyfishUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		262B3E06283D278200D788DA /* lazyfish */ = {
+			isa = PBXGroup;
+			children = (
+				262B3E07283D278200D788DA /* lazyfishApp.swift */,
+				262B3E09283D278200D788DA /* ContentView.swift */,
+				262B3E0B283D278200D788DA /* Assets.xcassets */,
+				262B3E10283D278200D788DA /* Persistence.swift */,
+				262B3E12283D278200D788DA /* lazyfish.xcdatamodeld */,
+				262B3E0D283D278200D788DA /* Preview Content */,
+			);
+			path = lazyfish;
+			sourceTree = "<group>";
+		};
+		262B3E0D283D278200D788DA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				262B3E0E283D278200D788DA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		262B3E1C283D278200D788DA /* lazyfishTests */ = {
+			isa = PBXGroup;
+			children = (
+				262B3E1D283D278200D788DA /* lazyfishTests.swift */,
+			);
+			path = lazyfishTests;
+			sourceTree = "<group>";
+		};
+		262B3E26283D278200D788DA /* lazyfishUITests */ = {
+			isa = PBXGroup;
+			children = (
+				262B3E27283D278200D788DA /* lazyfishUITests.swift */,
+				262B3E29283D278200D788DA /* lazyfishUITestsLaunchTests.swift */,
+			);
+			path = lazyfishUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		262B3E03283D278200D788DA /* lazyfish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 262B3E2D283D278200D788DA /* Build configuration list for PBXNativeTarget "lazyfish" */;
+			buildPhases = (
+				262B3E00283D278200D788DA /* Sources */,
+				262B3E01283D278200D788DA /* Frameworks */,
+				262B3E02283D278200D788DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lazyfish;
+			productName = lazyfish;
+			productReference = 262B3E04283D278200D788DA /* lazyfish.app */;
+			productType = "com.apple.product-type.application";
+		};
+		262B3E18283D278200D788DA /* lazyfishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 262B3E30283D278200D788DA /* Build configuration list for PBXNativeTarget "lazyfishTests" */;
+			buildPhases = (
+				262B3E15283D278200D788DA /* Sources */,
+				262B3E16283D278200D788DA /* Frameworks */,
+				262B3E17283D278200D788DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				262B3E1B283D278200D788DA /* PBXTargetDependency */,
+			);
+			name = lazyfishTests;
+			productName = lazyfishTests;
+			productReference = 262B3E19283D278200D788DA /* lazyfishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		262B3E22283D278200D788DA /* lazyfishUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 262B3E33283D278200D788DA /* Build configuration list for PBXNativeTarget "lazyfishUITests" */;
+			buildPhases = (
+				262B3E1F283D278200D788DA /* Sources */,
+				262B3E20283D278200D788DA /* Frameworks */,
+				262B3E21283D278200D788DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				262B3E25283D278200D788DA /* PBXTargetDependency */,
+			);
+			name = lazyfishUITests;
+			productName = lazyfishUITests;
+			productReference = 262B3E23283D278200D788DA /* lazyfishUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		262B3DFC283D278200D788DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					262B3E03283D278200D788DA = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					262B3E18283D278200D788DA = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 262B3E03283D278200D788DA;
+					};
+					262B3E22283D278200D788DA = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 262B3E03283D278200D788DA;
+					};
+				};
+			};
+			buildConfigurationList = 262B3DFF283D278200D788DA /* Build configuration list for PBXProject "lazyfish" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 262B3DFB283D278200D788DA;
+			productRefGroup = 262B3E05283D278200D788DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				262B3E03283D278200D788DA /* lazyfish */,
+				262B3E18283D278200D788DA /* lazyfishTests */,
+				262B3E22283D278200D788DA /* lazyfishUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		262B3E02283D278200D788DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262B3E0F283D278200D788DA /* Preview Assets.xcassets in Resources */,
+				262B3E0C283D278200D788DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262B3E17283D278200D788DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262B3E21283D278200D788DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		262B3E00283D278200D788DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262B3E11283D278200D788DA /* Persistence.swift in Sources */,
+				262B3E0A283D278200D788DA /* ContentView.swift in Sources */,
+				262B3E08283D278200D788DA /* lazyfishApp.swift in Sources */,
+				262B3E14283D278200D788DA /* lazyfish.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262B3E15283D278200D788DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262B3E1E283D278200D788DA /* lazyfishTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		262B3E1F283D278200D788DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262B3E2A283D278200D788DA /* lazyfishUITestsLaunchTests.swift in Sources */,
+				262B3E28283D278200D788DA /* lazyfishUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		262B3E1B283D278200D788DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 262B3E03283D278200D788DA /* lazyfish */;
+			targetProxy = 262B3E1A283D278200D788DA /* PBXContainerItemProxy */;
+		};
+		262B3E25283D278200D788DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 262B3E03283D278200D788DA /* lazyfish */;
+			targetProxy = 262B3E24283D278200D788DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		262B3E2B283D278200D788DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		262B3E2C283D278200D788DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		262B3E2E283D278200D788DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"lazyfish/Preview Content\"";
+				DEVELOPMENT_TEAM = 524DPYAE9P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = icu.ozline.lazyfish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		262B3E2F283D278200D788DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"lazyfish/Preview Content\"";
+				DEVELOPMENT_TEAM = 524DPYAE9P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = icu.ozline.lazyfish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		262B3E31283D278200D788DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 524DPYAE9P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = icu.ozline.lazyfishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lazyfish.app/lazyfish";
+			};
+			name = Debug;
+		};
+		262B3E32283D278200D788DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 524DPYAE9P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = icu.ozline.lazyfishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lazyfish.app/lazyfish";
+			};
+			name = Release;
+		};
+		262B3E34283D278200D788DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 524DPYAE9P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = icu.ozline.lazyfishUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lazyfish;
+			};
+			name = Debug;
+		};
+		262B3E35283D278200D788DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 524DPYAE9P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = icu.ozline.lazyfishUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lazyfish;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		262B3DFF283D278200D788DA /* Build configuration list for PBXProject "lazyfish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262B3E2B283D278200D788DA /* Debug */,
+				262B3E2C283D278200D788DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		262B3E2D283D278200D788DA /* Build configuration list for PBXNativeTarget "lazyfish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262B3E2E283D278200D788DA /* Debug */,
+				262B3E2F283D278200D788DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		262B3E30283D278200D788DA /* Build configuration list for PBXNativeTarget "lazyfishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262B3E31283D278200D788DA /* Debug */,
+				262B3E32283D278200D788DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		262B3E33283D278200D788DA /* Build configuration list for PBXNativeTarget "lazyfishUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				262B3E34283D278200D788DA /* Debug */,
+				262B3E35283D278200D788DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		262B3E12283D278200D788DA /* lazyfish.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				262B3E13283D278200D788DA /* lazyfish.xcdatamodel */,
+			);
+			currentVersion = 262B3E13283D278200D788DA /* lazyfish.xcdatamodel */;
+			path = lazyfish.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 262B3DFC283D278200D788DA /* Project object */;
+}
