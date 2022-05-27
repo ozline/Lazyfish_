@@ -16,6 +16,9 @@
 		262B3E1E283D278200D788DA /* lazyfishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E1D283D278200D788DA /* lazyfishTests.swift */; };
 		262B3E28283D278200D788DA /* lazyfishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E27283D278200D788DA /* lazyfishUITests.swift */; };
 		262B3E2A283D278200D788DA /* lazyfishUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E29283D278200D788DA /* lazyfishUITestsLaunchTests.swift */; };
+		262B3E37283D37E200D788DA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E36283D37E200D788DA /* TestView.swift */; };
+		262B3E39283DD32400D788DA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E38283DD32400D788DA /* LoginView.swift */; };
+		6394DDE99E1BCA455E92E811 /* Pods_lazyfish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452F6E8BFDC7D9F9129BAEDD /* Pods_lazyfish.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,11 @@
 		262B3E23283D278200D788DA /* lazyfishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lazyfishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		262B3E27283D278200D788DA /* lazyfishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazyfishUITests.swift; sourceTree = "<group>"; };
 		262B3E29283D278200D788DA /* lazyfishUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazyfishUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		262B3E36283D37E200D788DA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		262B3E38283DD32400D788DA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		452F6E8BFDC7D9F9129BAEDD /* Pods_lazyfish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lazyfish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C2F43D81BFA5D8391D5044A /* Pods-lazyfish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lazyfish.debug.xcconfig"; path = "Target Support Files/Pods-lazyfish/Pods-lazyfish.debug.xcconfig"; sourceTree = "<group>"; };
+		8DB84156CADB2C9148856A6B /* Pods-lazyfish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lazyfish.release.xcconfig"; path = "Target Support Files/Pods-lazyfish/Pods-lazyfish.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6394DDE99E1BCA455E92E811 /* Pods_lazyfish.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +91,8 @@
 				262B3E1C283D278200D788DA /* lazyfishTests */,
 				262B3E26283D278200D788DA /* lazyfishUITests */,
 				262B3E05283D278200D788DA /* Products */,
+				6EE41591DC123523803FD26D /* Pods */,
+				BCFF7DA17CA8031BCD8E279E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +115,8 @@
 				262B3E10283D278200D788DA /* Persistence.swift */,
 				262B3E12283D278200D788DA /* lazyfish.xcdatamodeld */,
 				262B3E0D283D278200D788DA /* Preview Content */,
+				262B3E36283D37E200D788DA /* TestView.swift */,
+				262B3E38283DD32400D788DA /* LoginView.swift */,
 			);
 			path = lazyfish;
 			sourceTree = "<group>";
@@ -133,6 +146,23 @@
 			path = lazyfishUITests;
 			sourceTree = "<group>";
 		};
+		6EE41591DC123523803FD26D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C2F43D81BFA5D8391D5044A /* Pods-lazyfish.debug.xcconfig */,
+				8DB84156CADB2C9148856A6B /* Pods-lazyfish.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BCFF7DA17CA8031BCD8E279E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				452F6E8BFDC7D9F9129BAEDD /* Pods_lazyfish.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 262B3E2D283D278200D788DA /* Build configuration list for PBXNativeTarget "lazyfish" */;
 			buildPhases = (
+				7A9478362219D25A14C0C983 /* [CP] Check Pods Manifest.lock */,
 				262B3E00283D278200D788DA /* Sources */,
 				262B3E01283D278200D788DA /* Frameworks */,
 				262B3E02283D278200D788DA /* Resources */,
+				CEE9374659DA4D0B389BC84A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,12 +290,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A9478362219D25A14C0C983 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lazyfish-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEE9374659DA4D0B389BC84A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lazyfish/Pods-lazyfish-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lazyfish/Pods-lazyfish-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lazyfish/Pods-lazyfish-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		262B3E00283D278200D788DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262B3E39283DD32400D788DA /* LoginView.swift in Sources */,
 				262B3E11283D278200D788DA /* Persistence.swift in Sources */,
+				262B3E37283D37E200D788DA /* TestView.swift in Sources */,
 				262B3E0A283D278200D788DA /* ContentView.swift in Sources */,
 				262B3E08283D278200D788DA /* lazyfishApp.swift in Sources */,
 				262B3E14283D278200D788DA /* lazyfish.xcdatamodeld in Sources */,
@@ -419,6 +495,7 @@
 		};
 		262B3E2E283D278200D788DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C2F43D81BFA5D8391D5044A /* Pods-lazyfish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +525,7 @@
 		};
 		262B3E2F283D278200D788DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB84156CADB2C9148856A6B /* Pods-lazyfish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

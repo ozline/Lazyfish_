@@ -15,30 +15,82 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    
+    @State private var username:String = ""
+    @State private var password:String = ""
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+        TabView{
+            NavigationView {
+                List {
+                    ForEach(items) { item in
+                        NavigationLink {
+                            Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        } label: {
+                            Text(item.timestamp!, formatter: itemFormatter)
+                        }
+                    }
+                    .onDelete(perform: deleteItems)
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        EditButton()
+                    }
+                    ToolbarItem {
+                        Button(action: addItem) {
+                            Label("Add Item", systemImage: "plus")
+                        }
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .navigationTitle("Lazyfish")
+                Text("Select an item")
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+            .tabItem({
+                Image(systemName: "house")
+                Text("首页")
+            })
+            
+            NavigationView{
+                Form{
+                    Section(header: Text("账号")){
+                        TextField("账号",text: $username)
+                            .textInputAutocapitalization(.never)
+                            .disableAutocorrection(true)
+                            .textFieldStyle(.roundedBorder)
+                            .multilineTextAlignment(.leading)
+//                            .padding(.horizontal,26)
+                            .keyboardType(.phonePad)
+                    }
+                    Section(header: Text("密码")){
+                        SecureField("密码",text:$password)
+                            .textInputAutocapitalization(.never)
+                            .disableAutocorrection(true)
+                            .textFieldStyle(.roundedBorder)
+                            .multilineTextAlignment(.leading)
+//                            .padding(.horizontal,26)
+                            .keyboardType(.phonePad)
+                    }
+                    Button(action:addItem){
+                        HStack{
+                            Spacer()
+                            Text("登录")
+                            Spacer()
+                        }
                     }
                 }
+                    
+                    .navigationTitle("Login")
             }
-            Text("Select an item")
+            .tabItem({
+                    Image(systemName: "gear")
+                    Text("Login")
+                })
+            
+            Text("PAGE THREE")
+                .tabItem({
+                    Image(systemName: "person")
+                    Text("我的")
+                })
         }
     }
 
@@ -83,6 +135,9 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        Group {
+            ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewInterfaceOrientation(.portrait)
+            ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewInterfaceOrientation(.portrait)
+        }
     }
 }
