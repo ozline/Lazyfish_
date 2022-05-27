@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		262B3E08283D278200D788DA /* lazyfishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E07283D278200D788DA /* lazyfishApp.swift */; };
-		262B3E0A283D278200D788DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E09283D278200D788DA /* ContentView.swift */; };
 		262B3E0C283D278200D788DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262B3E0B283D278200D788DA /* Assets.xcassets */; };
 		262B3E0F283D278200D788DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262B3E0E283D278200D788DA /* Preview Assets.xcassets */; };
 		262B3E11283D278200D788DA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E10283D278200D788DA /* Persistence.swift */; };
@@ -16,8 +15,17 @@
 		262B3E1E283D278200D788DA /* lazyfishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E1D283D278200D788DA /* lazyfishTests.swift */; };
 		262B3E28283D278200D788DA /* lazyfishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E27283D278200D788DA /* lazyfishUITests.swift */; };
 		262B3E2A283D278200D788DA /* lazyfishUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E29283D278200D788DA /* lazyfishUITestsLaunchTests.swift */; };
-		262B3E37283D37E200D788DA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E36283D37E200D788DA /* TestView.swift */; };
 		262B3E39283DD32400D788DA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B3E38283DD32400D788DA /* LoginView.swift */; };
+		263337152840D1A500E80466 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263337142840D1A500E80466 /* Global.swift */; };
+		263337192840D91A00E80466 /* EntranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263337182840D91A00E80466 /* EntranceView.swift */; };
+		2633371D2840ED3E00E80466 /* ContextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633371C2840ED3E00E80466 /* ContextView.swift */; };
+		263337212841123100E80466 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263337202841123100E80466 /* ProfileView.swift */; };
+		263337232841128600E80466 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263337222841128600E80466 /* UploadView.swift */; };
+		263337252841129000E80466 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263337242841129000E80466 /* PaymentView.swift */; };
+		263337272841129B00E80466 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263337262841129B00E80466 /* AddressView.swift */; };
+		26333729284112B800E80466 /* ItemCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26333728284112B800E80466 /* ItemCategoryView.swift */; };
+		2633372B284112C600E80466 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633372A284112C600E80466 /* ItemView.swift */; };
+		2633372F2841160A00E80466 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633372E2841160A00E80466 /* SettingsView.swift */; };
 		6394DDE99E1BCA455E92E811 /* Pods_lazyfish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452F6E8BFDC7D9F9129BAEDD /* Pods_lazyfish.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +49,6 @@
 /* Begin PBXFileReference section */
 		262B3E04283D278200D788DA /* lazyfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lazyfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		262B3E07283D278200D788DA /* lazyfishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazyfishApp.swift; sourceTree = "<group>"; };
-		262B3E09283D278200D788DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		262B3E0B283D278200D788DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		262B3E0E283D278200D788DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		262B3E10283D278200D788DA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -51,8 +58,17 @@
 		262B3E23283D278200D788DA /* lazyfishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lazyfishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		262B3E27283D278200D788DA /* lazyfishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazyfishUITests.swift; sourceTree = "<group>"; };
 		262B3E29283D278200D788DA /* lazyfishUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazyfishUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		262B3E36283D37E200D788DA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		262B3E38283DD32400D788DA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		263337142840D1A500E80466 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		263337182840D91A00E80466 /* EntranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceView.swift; sourceTree = "<group>"; };
+		2633371C2840ED3E00E80466 /* ContextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextView.swift; sourceTree = "<group>"; };
+		263337202841123100E80466 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		263337222841128600E80466 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
+		263337242841129000E80466 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		263337262841129B00E80466 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		26333728284112B800E80466 /* ItemCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoryView.swift; sourceTree = "<group>"; };
+		2633372A284112C600E80466 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		2633372E2841160A00E80466 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		452F6E8BFDC7D9F9129BAEDD /* Pods_lazyfish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lazyfish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2F43D81BFA5D8391D5044A /* Pods-lazyfish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lazyfish.debug.xcconfig"; path = "Target Support Files/Pods-lazyfish/Pods-lazyfish.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB84156CADB2C9148856A6B /* Pods-lazyfish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lazyfish.release.xcconfig"; path = "Target Support Files/Pods-lazyfish/Pods-lazyfish.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,14 +125,13 @@
 		262B3E06283D278200D788DA /* lazyfish */ = {
 			isa = PBXGroup;
 			children = (
+				2633371B2840ECFF00E80466 /* Views */,
 				262B3E07283D278200D788DA /* lazyfishApp.swift */,
-				262B3E09283D278200D788DA /* ContentView.swift */,
 				262B3E0B283D278200D788DA /* Assets.xcassets */,
 				262B3E10283D278200D788DA /* Persistence.swift */,
 				262B3E12283D278200D788DA /* lazyfish.xcdatamodeld */,
 				262B3E0D283D278200D788DA /* Preview Content */,
-				262B3E36283D37E200D788DA /* TestView.swift */,
-				262B3E38283DD32400D788DA /* LoginView.swift */,
+				263337142840D1A500E80466 /* Global.swift */,
 			);
 			path = lazyfish;
 			sourceTree = "<group>";
@@ -144,6 +159,23 @@
 				262B3E29283D278200D788DA /* lazyfishUITestsLaunchTests.swift */,
 			);
 			path = lazyfishUITests;
+			sourceTree = "<group>";
+		};
+		2633371B2840ECFF00E80466 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				263337182840D91A00E80466 /* EntranceView.swift */,
+				262B3E38283DD32400D788DA /* LoginView.swift */,
+				2633371C2840ED3E00E80466 /* ContextView.swift */,
+				263337202841123100E80466 /* ProfileView.swift */,
+				263337222841128600E80466 /* UploadView.swift */,
+				263337242841129000E80466 /* PaymentView.swift */,
+				263337262841129B00E80466 /* AddressView.swift */,
+				26333728284112B800E80466 /* ItemCategoryView.swift */,
+				2633372A284112C600E80466 /* ItemView.swift */,
+				2633372E2841160A00E80466 /* SettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6EE41591DC123523803FD26D /* Pods */ = {
@@ -338,11 +370,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				262B3E39283DD32400D788DA /* LoginView.swift in Sources */,
+				263337252841129000E80466 /* PaymentView.swift in Sources */,
+				263337232841128600E80466 /* UploadView.swift in Sources */,
+				263337212841123100E80466 /* ProfileView.swift in Sources */,
 				262B3E11283D278200D788DA /* Persistence.swift in Sources */,
-				262B3E37283D37E200D788DA /* TestView.swift in Sources */,
-				262B3E0A283D278200D788DA /* ContentView.swift in Sources */,
+				263337272841129B00E80466 /* AddressView.swift in Sources */,
+				2633371D2840ED3E00E80466 /* ContextView.swift in Sources */,
+				2633372F2841160A00E80466 /* SettingsView.swift in Sources */,
+				263337192840D91A00E80466 /* EntranceView.swift in Sources */,
 				262B3E08283D278200D788DA /* lazyfishApp.swift in Sources */,
+				26333729284112B800E80466 /* ItemCategoryView.swift in Sources */,
+				2633372B284112C600E80466 /* ItemView.swift in Sources */,
 				262B3E14283D278200D788DA /* lazyfish.xcdatamodeld in Sources */,
+				263337152840D1A500E80466 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
