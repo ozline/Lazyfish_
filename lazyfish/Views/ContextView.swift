@@ -22,7 +22,7 @@ struct ContentView: View {
             get: { self.selection }, set:{
                 self.selection = $0
                 if(self.selection==2){
-                    if(!isLogin){
+                    if(!Global.islogin){
                         self.loginActive.toggle()
                     }
                 }
@@ -40,7 +40,7 @@ struct ContentView: View {
             })
             .tag(0)
             
-            //上架闲置
+            //上闲置
             UploadView()
                 .tabItem({
                     Image(systemName: "gear")
@@ -48,6 +48,7 @@ struct ContentView: View {
                 })
                 .tag(1)
 
+            //个人资料页
             ProfileView()
             .tabItem({
                     Image(systemName: "person")

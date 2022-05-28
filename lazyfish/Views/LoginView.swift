@@ -13,6 +13,8 @@ struct LoginView: View {
     @State private var password:String = ""
     @State private var showAlert:Bool = false
     @Binding var successLogin:Bool
+    
+    @State private var loginErrorMsg:String = ""
 
     var body: some View {
         NavigationView{
@@ -22,14 +24,14 @@ struct LoginView: View {
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
                         .multilineTextAlignment(.leading)
-                        .keyboardType(.phonePad)
+                        .keyboardType(.numberPad)
                 }
                 Section(header: Text("密码")){
                     SecureField("教务处密码",text:$password)
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
                         .multilineTextAlignment(.leading)
-                        .keyboardType(.phonePad)
+//                        .keyboardType(.phonePad)
                 }
                 Section(header: Text("验证码")){
                     
@@ -42,7 +44,7 @@ struct LoginView: View {
                     }
                 }
                 .alert(isPresented: $showAlert){
-                    Alert(title:Text("学号、密码或验证码不正确"))
+                    Alert(title:Text("登录失败"),message: Text(loginErrorMsg))
                 }
             }
             .navigationTitle("登录")
@@ -52,12 +54,32 @@ struct LoginView: View {
     }
     
     private func loginUser() {
-        if(username.count != 0){
-            userid = Int(username)!
-            successLogin = true
-            return
+        if(username.count != 0 && password.count != 0){
+            Global.userid = Int(username)!
+            userLogin(asp: "111", username: username, password: password, verifycode: "100"){
+                (result:Bool,msg:String) in
+                
+                if(result){
+                    userInit(){
+                        (result:Bool,msg:String) in
+                        if(result){
+                            successLogin = true
+                        }else{
+                            loginErrorHandler(msg: msg)
+                        }
+                    }
+                    
+                }else{
+                    loginErrorHandler(msg: msg)
+                }
+            }
+        }else{
+            loginErrorHandler(msg: "学号、密码或验证码不正确")
         }
-        
+    }
+    
+    private func loginErrorHandler(msg:String){
+        loginErrorMsg = msg
         self.showAlert.toggle()
     }
 }
