@@ -29,21 +29,33 @@ struct ContentView: View {
             }
         )
     }
+    
+    init(){
+//        UITabBar.appearance().backgroundColor = .lightGray
+    }
 
     var body: some View {
         TabView(selection: handler){
             //主页
-            ItemView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewInterfaceOrientation(.portrait)
+            ItemListView()
             .tabItem({
                 Image(systemName: "house")
                 Text("首页")
             })
             .tag(0)
             
+            //搜索
+            ItemSearchView()
+                .tabItem({
+                    Image(systemName: "equal")
+                    Text("搜索")
+                })
+                .tag(3)
+            
             //上闲置
             UploadView()
                 .tabItem({
-                    Image(systemName: "gear")
+                    Image(systemName: "chevron.up.circle")
                     Text("上架")
                 })
                 .tag(1)
@@ -55,7 +67,6 @@ struct ContentView: View {
                     Text("我的")
                 })
             .tag(2)
-
         }
     }
 }
@@ -63,8 +74,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewInterfaceOrientation(.portrait)
-            ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewInterfaceOrientation(.portrait)
+            ContentView()
+            ContentView()
         }
     }
 }

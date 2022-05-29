@@ -133,7 +133,7 @@ func userGetByID(userid:String,action: @escaping (Bool,String,UserType) -> Void)
 func userLoginout(action: @escaping (Bool,String) -> Void){
     let url = Global.host+"/user/logout"
     
-    AF.request(url,method: .put,headers: Global.headers).responseJSON{
+    AF.request(url,method: .post,headers: Global.headers).responseJSON{
         response in
         switch(response.result){
         case .success(let json):

@@ -15,9 +15,12 @@ struct ProfileView: View {
     @State var sex:String = ""
     @State var description:String = ""
     @State var isLogin:Bool = false
-    @State var isPresent:Bool = false
-    @State var showAlert:Bool = false
-    @State var loginoutErrorMsg:String = ""
+    
+    @State var isPresentLogout:Bool = false
+    @State var isPresentReview:Bool = false
+    
+    @State var showAlertLogout:Bool = false
+    @State var logoutErrorMsg:String = ""
     
     var body: some View {
         NavigationView{
@@ -50,38 +53,36 @@ struct ProfileView: View {
                 }
                 if(Global.isadmin){
                     Section(header: Text("管理")){
-                        Button(action:login){
+                        NavigationLink(destination: ItemReviewView()){
                             HStack{
-                                Spacer()
-                                Text("商品审核")
-                                Spacer()
+                                Text("物品审核")
+                                    .foregroundColor(.blue)
                             }
                         }
-                        Button(action:login){
+                        NavigationLink(destination: ItemReviewView()){
                             HStack{
-                                Spacer()
-                                Text("小黑屋管理")
-                                Spacer()
+                                Text("小黑屋")
+                                    .foregroundColor(.blue)
                             }
                         }
                     }
                 }
                 if(userid == Global.userid){ //当前用户时才显示
                     Section(header: Text("设置")){
-                        Button(action:login){
-                            HStack{
-                                Spacer()
-                                Text("软件设置")
-                                Spacer()
-                            }
-                        }
-                        Button(action:login){
-                            HStack{
-                                Spacer()
-                                Text("编辑资料")
-                                Spacer()
-                            }
-                        }
+//                        Button(action:login){
+//                            HStack{
+//                                Spacer()
+//                                Text("软件设置")
+//                                Spacer()
+//                            }
+//                        }
+//                        Button(action:login){
+//                            HStack{
+//                                Spacer()
+//                                Text("编辑资料")
+//                                Spacer()
+//                            }
+//                        }
                         Button(action:loginout){
                             HStack{
                                 Spacer()
@@ -89,15 +90,15 @@ struct ProfileView: View {
                                     .foregroundColor(.red)
                                 Spacer()
                             }
-                        }.fullScreenCover(isPresented: $isPresent, content: {
+                        }.fullScreenCover(isPresented: $isPresentLogout, content: {
                             if isLogin{
                                 ContentView()
                             }else{
                                 LoginView(successLogin: $isLogin)
                             }
                         })
-                        .alert(isPresented: $showAlert){
-                            Alert(title:Text("退出失败"),message: Text(loginoutErrorMsg))
+                        .alert(isPresented: $showAlertLogout){
+                            Alert(title:Text("退出失败"),message: Text(logoutErrorMsg))
                         }
                     }
                 }
@@ -126,6 +127,10 @@ struct ProfileView: View {
         
     }
     
+    private func reviewItem(){
+        
+    }
+    
     private func loginout(){
         userLoginout(){
             (res:Bool,msg:String) in
@@ -134,10 +139,10 @@ struct ProfileView: View {
                 Global.islogin = false
                 Global.isadmin = false
                 Global.token = ""
-                self.isPresent.toggle()
+                self.isPresentLogout.toggle()
             }else{
-                self.loginoutErrorMsg = msg
-                self.showAlert.toggle()
+                self.logoutErrorMsg = msg
+                self.showAlertLogout.toggle()
             }
         }
     }

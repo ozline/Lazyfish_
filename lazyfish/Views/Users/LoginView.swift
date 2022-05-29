@@ -15,6 +15,8 @@ struct LoginView: View {
     @Binding var successLogin:Bool
     
     @State private var loginErrorMsg:String = ""
+    
+    @State var isPresentLogin:Bool = false
 
     var body: some View {
         NavigationView{
