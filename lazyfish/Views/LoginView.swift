@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State private var username:String = ""
-    @State private var password:String = ""
+    @State private var username:String = "052106112"
+    @State private var password:String = "mima1216"
     @State private var showAlert:Bool = false
     @Binding var successLogin:Bool
     
@@ -55,7 +55,6 @@ struct LoginView: View {
     
     private func loginUser() {
         if(username.count != 0 && password.count != 0){
-            Global.userid = Int(username)!
             userLogin(asp: "111", username: username, password: password, verifycode: "100"){
                 (result:Bool,msg:String) in
                 

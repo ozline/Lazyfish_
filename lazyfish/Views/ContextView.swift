@@ -49,7 +49,7 @@ struct ContentView: View {
                 .tag(1)
 
             //个人资料页
-            ProfileView()
+            ProfileView(userid:Global.userid)
             .tabItem({
                     Image(systemName: "person")
                     Text("我的")

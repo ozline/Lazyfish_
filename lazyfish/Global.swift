@@ -11,7 +11,7 @@ import Foundation
 import Alamofire
 
 struct Global{
-    static var userid = 0 //这里表示学号
+    static var userid = "" //这里表示学号，不能用整形存是因为存在0开头的学号
     static var islogin = false //是否已登录
     static var token = "" //jwtToken
     static var isadmin = false //是否是管理员
@@ -20,4 +20,5 @@ struct Global{
         "token" : token,
         "Content-Type": "application/x-www-form-urlencoded"
     ]
+    static var itemTypes:[ItemType] = []
 }

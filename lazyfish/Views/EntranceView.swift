@@ -11,6 +11,13 @@ struct EntranceView: View {
     
     @State var isLogin:Bool = false
     var body: some View {
+        getCommodityType(){
+            (res:Bool,msg:String) in
+            
+            if !res{
+                exit(0)
+            }
+        }
         return Group{
             if isLogin { //登录成功进入主界面
                 ContentView()
