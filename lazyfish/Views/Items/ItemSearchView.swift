@@ -17,17 +17,24 @@ struct ItemSearchView: View {
     @State var pages:Int = 0
     @State var selectedIndex:Int = 0
     
-    @State var seachMsg = ""
+    @State var searchMsg = ""
     
     var body: some View {
         NavigationView{
             List(){
-                SearchBar(text: $seachMsg, placeholder: "待搜索关键词"){
+                SearchBar(text: $searchMsg, placeholder: "待搜索关键词"){
                     (msg:String) in
                     
-                    print(msg)
+                    searchCommodity(current: Int(listPage)!, size: Int(pageSize)!, searchKey: msg, sortType: -1){
+                        (res:Bool,msg:String,list:[Commodity],total:Int) in
+                        if res{
+                            totalNum = total
+                            pages = Int(ceil(Double(totalNum)/Double(pageSize)!))
+                            commodityList = list
+                        }
+                    }
                 }
-                Section("待审列表"){
+                Section("搜索结果"){
                     ForEach(commodityList,id: \.id){ commodity in
                         if(commodity.id != nil){
                             NavigationLink((commodity.title != nil) ? commodity.title! : "Unknow",destination: ItemView(itemid: commodity.id!,itemData: commodity))
@@ -52,30 +59,17 @@ struct ItemSearchView: View {
                 }
             }
             .navigationTitle("搜索")
-            .onAppear(){
-                getReviewList(current: 1, size: 10){
-                    (res:Bool,msg:String,list:[Commodity],total:Int) in
-                    
-                    if res{
-                        totalNum = total
-    //                    let tmp = ceil(Double(totalNum)/Double(pageSize)!)
-                        pages = Int(ceil(Double(totalNum)/Double(pageSize)!))
-                        commodityList = list
-                    }
-                }
-            }
         }
     }
     
     private func refresh(){
-        getReviewList(current: Int(listPage)!, size: Int(pageSize)!){
+        searchCommodity(current: Int(listPage)!, size: Int(pageSize)!, searchKey: searchMsg, sortType: -1){
             (res:Bool,msg:String,list:[Commodity],total:Int) in
             if res{
                 totalNum = total
                 pages = Int(ceil(Double(totalNum)/Double(pageSize)!))
                 commodityList = list
             }
-            print(pages)
         }
     }
 }

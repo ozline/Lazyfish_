@@ -27,7 +27,7 @@ struct ItemListView: View {
                         Text(Global.itemTypes[$0].name ?? "NULL")
                     }
                 }
-                Section("待审列表"){
+                Section("商品列表"){
                     ForEach(commodityList,id: \.id){ commodity in
                         if(commodity.id != nil){
                             NavigationLink((commodity.title != nil) ? commodity.title! : "Unknow",destination: ItemView(itemid: commodity.id!,itemData: commodity))

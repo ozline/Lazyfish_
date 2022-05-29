@@ -42,13 +42,19 @@ struct UserType: HandyJSON{
     var star : Int? //好评数
     var updateTime : String? //最近登录时间
 }
+
+struct AddressType: HandyJSON,Encodable{
+    var id : Int = -1
+    var userid : String = "-1"
+    var address : String = "NULL"
+    var isDefault : Bool = false
+}
 /**
  用户登录
  */
 func userLogin(asp:String,username:String,password:String,verifycode:String,action: @escaping (Bool,String) -> Void) {
 
-    //toLogin，登录获取Token
-    let url = Global.host+"/toLogin"
+    let url = Global.host+"/user/activate"
 
     let login = Login(asp: asp, passwd: password, muser: username, username: username, verifyCode: verifycode)
     AF.request(url,method: .post,parameters: login,encoder: URLEncodedFormParameterEncoder.default).responseJSON{
@@ -58,10 +64,28 @@ func userLogin(asp:String,username:String,password:String,verifycode:String,acti
             let data = JSON(json)
             let code = data["code"].intValue
             let msg = data["msg"].stringValue
-            if(code==200){
-                Global.token = data["data"]["token"].stringValue
+            if(code != 1){ //此处应当改为==200
+                let url = Global.host+"/toLogin"
+
+                let login = Login(asp: asp, passwd: password, muser: username, username: username, verifyCode: verifycode)
+                AF.request(url,method: .post,parameters: login,encoder: URLEncodedFormParameterEncoder.default).responseJSON{
+                    response in
+                    switch(response.result){
+                    case .success(let json):
+                        let data = JSON(json)
+                        let code = data["code"].intValue
+                        let msg = data["msg"].stringValue
+                        if(code==200){
+                            Global.token = data["data"]["token"].stringValue
+                        }
+                        action(code==200,msg)
+                    case .failure(let err):
+                        debugPrint(err)
+                    }
+                }
+            }else{
+                action(code==200,msg)
             }
-            action(code==200,msg)
         case .failure(let err):
             debugPrint(err)
         }
@@ -134,6 +158,95 @@ func userLoginout(action: @escaping (Bool,String) -> Void){
     let url = Global.host+"/user/logout"
     
     AF.request(url,method: .post,headers: Global.headers).responseJSON{
+        response in
+        switch(response.result){
+        case .success(let json):
+            let data = JSON(json)
+            let code = data["code"].intValue
+            let msg = data["msg"].stringValue
+            action(code==200,msg)
+        case .failure(let err):
+            debugPrint(err)
+        }
+    }
+}
+
+
+func getAddressList(action: @escaping (Bool,String,[AddressType]) -> Void){
+    let url = Global.host+"/user/showAddr"
+    
+    AF.request(url,method: .get,headers: Global.headers).responseJSON{
+        response in
+        switch(response.result){
+        case .success(let json):
+            let data = JSON(json)
+            let code = data["code"].intValue
+            let msg = data["msg"].stringValue
+            if code==200{
+                var list:[AddressType] = []
+                for (_,subJSON):(String,JSON) in data["data"]{
+                    list.append(AddressType.deserialize(from: subJSON.dictionaryObject)!)
+                }
+                action(true,msg,list)
+            }else{
+                action(false,msg,[AddressType()])
+            }
+        case .failure(let err):
+            debugPrint(err)
+        }
+    }
+}
+
+/**
+ 删除地址
+ */
+func deleteAddress(id:Int,action: @escaping (Bool,String) -> Void){
+    let url = Global.host+"/user/deleteAddr/"+String(id)
+    
+    AF.request(url,method: .delete,headers: Global.headers).responseJSON{
+        response in
+        switch(response.result){
+        case .success(let json):
+            let data = JSON(json)
+            let code = data["code"].intValue
+            let msg = data["msg"].stringValue
+            action(code==200,msg)
+        case .failure(let err):
+            debugPrint(err)
+        }
+    }
+}
+
+func updateAddress(id:Int,newAddr:String,isDefault:Bool,action: @escaping (Bool,String) -> Void){
+    let url = Global.host+"/user/updateAddr"
+    
+    let parameters = AddressType(id: id, userid: "", address: newAddr, isDefault: isDefault)
+    
+    AF.request(url,method: .post,parameters: parameters,encoder: URLEncodedFormParameterEncoder.default,headers: Global.headers).responseJSON{
+        response in
+        switch(response.result){
+        case .success(let json):
+            let data = JSON(json)
+            let code = data["code"].intValue
+            let msg = data["msg"].stringValue
+            action(code==200,msg)
+        case .failure(let err):
+            debugPrint(err)
+        }
+    }
+}
+
+func addAddress(newAddr:String,action: @escaping (Bool,String) -> Void){
+    let url = Global.host+"/user/addAddr"
+    
+    struct addr:Encodable{
+        let address : String
+        let isDefault : Int = 1
+    }
+    
+    let parameters = addr(address: newAddr)
+    
+    AF.request(url,method: .post,parameters: parameters,encoder: URLEncodedFormParameterEncoder.default,headers: Global.headers).responseJSON{
         response in
         switch(response.result){
         case .success(let json):

@@ -68,14 +68,16 @@ struct ContentView: View {
                 })
             .tag(2)
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ContentView()
-            ContentView()
+        .onAppear(){
+            getAddressList(){
+                (res:Bool,msg:String,list:[AddressType]) in
+                
+                if res{
+                    Global.addressList = list
+                }else{
+                    print(res,msg,list)
+                }
+            }
         }
     }
 }

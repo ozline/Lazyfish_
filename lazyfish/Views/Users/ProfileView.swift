@@ -14,6 +14,7 @@ struct ProfileView: View {
     @State var name:String = ""
     @State var sex:String = ""
     @State var description:String = ""
+    @State var userData:UserType = UserType()
     @State var isLogin:Bool = false
     
     @State var isPresentLogout:Bool = false
@@ -51,8 +52,8 @@ struct ProfileView: View {
                         Text(description)
                     }
                 }
-                if(Global.isadmin){
-                    Section(header: Text("管理")){
+                Section(header: Text("管理")){
+                    if(Global.isadmin){
                         NavigationLink(destination: ItemReviewView()){
                             HStack{
                                 Text("物品审核")
@@ -66,8 +67,23 @@ struct ProfileView: View {
                             }
                         }
                     }
+                    NavigationLink(destination: AddressView()){
+                        HStack{
+                            Text("收货地址")
+                                .foregroundColor(.blue)
+                        }
+                    }
                 }
                 if(userid == Global.userid){ //当前用户时才显示
+                    Section("我的钱包"){
+                        HStack{
+                            Text("可用余额")
+                                .foregroundColor(.gray)
+                            Spacer()
+                            Text(String(userData.money != nil ? userData.money! : -1.00))
+                            Text("元")
+                        }
+                    }
                     Section(header: Text("设置")){
 //                        Button(action:login){
 //                            HStack{
@@ -113,6 +129,7 @@ struct ProfileView: View {
                     name = (data.realName != nil) ? data.realName! : "NULL"
                     sex = transSex(sex: (data.sex != nil) ? data.sex! : 2)
                     description = (data.sig != nil) ? data.sig! : "NULL"
+                    userData = data
                 }
                 
             }

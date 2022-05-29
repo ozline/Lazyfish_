@@ -21,4 +21,5 @@ struct Global{
         "Content-Type": "application/x-www-form-urlencoded"
     ]
     static var itemTypes:[ItemType] = []
+    static var addressList:[AddressType] = []
 }
